@@ -8,10 +8,10 @@ if (valueNumDroid === null) {
   message = "Отменено пользователем!";
 } else {
   totalPrice = Math.round(valueNumDroid) * pricePerDroid;
-  if (totalPrice > credits) {
-    message = "Недостаточно средств на счету!";
-  } else if (isNaN(valueNumDroid)) {
+  if (isNaN(valueNumDroid)) {
     message = "Вы ввели неверное количество дроидов.";
+  } else if (totalPrice > credits) {
+    message = "Недостаточно средств на счету!";
   } else {
     message = `Вы купили ${Math.round(
       valueNumDroid
